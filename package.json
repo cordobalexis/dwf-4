@@ -4,9 +4,14 @@
   "license": "MIT",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "deploy": "gh-pages -d ./dist",
+    "build-and-deploy": "yarn build && yarn deploy"
   },
   "dependencies": {
     "parcel": "^2.16.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
