@@ -37,6 +37,11 @@ const routes = [
     }
 ]
 export function initRouter (container: Element){
+
+    function getRoute() {
+    return location.pathname.replace("/dwf-4", "") || "/";
+    }
+
     function goTo(path: string){
         history.pushState({}, "", path);
         handleRoute(path);
@@ -53,9 +58,9 @@ export function initRouter (container: Element){
             }
         }
     }
-    handleRoute(location.pathname);
+    handleRoute(getRoute());
     window.onpopstate = () =>{
-        handleRoute(location.pathname);
+        handleRoute(getRoute());
     };
     return {
         goTo
