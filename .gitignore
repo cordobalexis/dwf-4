@@ -1,3 +1,10 @@
 node_modules/
 dist/
 .parcel-cache/
+
+serviceAccountKey.json
+# Variables de entorno y credenciales
+.env
+.env.*
+!.env.example
+serviceAccountKey.json

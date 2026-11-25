@@ -1,6 +1,6 @@
-import piedra from "url:../../../assets/piedra.png";
-import papel from "url:../../../assets/papel.png";
-import tijera from "url:../../../assets/tijera.png";
+import piedra from "../../../assets/piedra.png";
+import papel from "../../../assets/papel.png";
+import tijera from "../../../assets/tijera.png";
 
 const hands: any = {
     piedra,

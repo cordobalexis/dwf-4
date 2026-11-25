@@ -17,7 +17,7 @@ export function initResultPage(){
         render(){
             const score = state.getScore();
             const playerScore = score?.playerScore;
-            const computerScore = score?.computerScore;
+            const opponentScore = score?.opponentScore;
             const result = state.getResult();
             this.result = result;
             if(this.result === "win"){
@@ -38,7 +38,7 @@ export function initResultPage(){
 
                         <result-star result="win"></result-star>
 
-                        <score-board player-score="${playerScore}" computer-score="${computerScore}"></score-board>
+                        <score-board player-score="${playerScore}" computer-score="${opponentScore}"></score-board>
 
                         <custom-button type="submit">Volver a Jugar</custom-button>
                     
@@ -63,7 +63,7 @@ export function initResultPage(){
 
                         <result-star result="lose"></result-star>
 
-                        <score-board player-score="${playerScore}" computer-score="${computerScore}"></score-board>
+                        <score-board player-score="${playerScore}" computer-score="${opponentScore}"></score-board>
 
                         <custom-button type="submit">Volver a Jugar</custom-button>
                     

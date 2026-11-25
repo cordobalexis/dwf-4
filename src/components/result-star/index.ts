@@ -1,5 +1,5 @@
-import star1 from "url:../../../assets/star1.png";
-import star2 from "url:../../../assets/star2.png";
+import star1 from "../../../assets/star1.png";
+import star2 from "../../../assets/star2.png";
 
 const stars: any = {
     win: star1,

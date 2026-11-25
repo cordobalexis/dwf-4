@@ -6,18 +6,27 @@ class WelcomePage extends HTMLElement{
     }
     connectedCallback(){
         this.render();
-        const button = this.querySelector("custom-button");
-        button?.addEventListener("click", ()=>{
-            this.goTo("/instructions")
+        const buttonNewGame = this.querySelector(".btn_new-game");
+        buttonNewGame?.addEventListener("click", ()=>{
+            this.goTo("/name")
+        });
+
+        const buttonExistingRoom = this.querySelector(".btn_room");
+        buttonExistingRoom?.addEventListener("click", ()=>{
+            this.goTo("/sala")
         });
     }
     render(){
         this.innerHTML = `
         <style>
+
+            body { margin: 0; }
+
             .welcome-page{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                gap: 20px;
                 justify-content: space-between;
                 width: 100%;
                 min-height: 100vh;
@@ -27,12 +36,17 @@ class WelcomePage extends HTMLElement{
                 #101010;
             }
             .scc{
-                width: 100%;
+                width: min(calc(100% - 32px), 480px);
+                margin-inline: auto;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 gap: 50px;
-                margin-top: 200px;
+                margin-top: 150px;
+            }
+
+            .scc custom-input {
+                width: 100%;
             }
             
             .hand-options{
@@ -46,6 +60,24 @@ class WelcomePage extends HTMLElement{
                 width: 56px;
                 height: 128px;
             }
+
+            @media (min-width: 960px){
+
+                game-title{
+                    width: 308px;
+                    height: 219px;
+                }
+
+                .scc{
+                    width: 336px;
+                    margin: auto;
+                }
+
+                .hand-options{
+                    width: 336px;
+                }
+            }
+
         </style>
 
         <div class="welcome-page">
@@ -54,7 +86,10 @@ class WelcomePage extends HTMLElement{
                 <game-title variant="title">Piedra, Papel ó Tijera
                 </game-title>
 
-                <custom-button>Empezar</custom-button>
+                <custom-button class="btn_new-game">Nuevo Juego</custom-button>
+
+                <custom-button class="btn_room">Ingresar a una sala</custom-button>
+
             </div>
 
             <div class="hand-options">

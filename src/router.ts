@@ -9,9 +9,45 @@ const routes = [
     },
 
     {
+        path: /\/sala/,
+        component: (props: any) => {
+           const el = document.createElement("room-page") as any;
+           el.goTo = props.goTo;
+           return el;
+        }
+    },
+
+    {
+        path: /\/name/,
+        component: (props: any) => {
+           const el = document.createElement("user-name-page") as any;
+           el.goTo = props.goTo;
+           return el;
+        }
+    },
+
+    {
+        path: /\/codigo/,
+        component: (props: any) => {
+           const el = document.createElement("code-page") as any;
+           el.goTo = props.goTo;
+           return el;
+        }
+    },
+
+    {
         path: /\/instruction/,
         component: (props: any) => {
            const el = document.createElement("instructions-page") as any;
+           el.goTo = props.goTo;
+           return el;
+        }
+    },
+
+    {
+        path: /\/waiting/,
+        component: (props: any) => {
+           const el = document.createElement("waiting-page") as any;
            el.goTo = props.goTo;
            return el;
         }

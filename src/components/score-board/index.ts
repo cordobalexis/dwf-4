@@ -29,7 +29,7 @@ export function initScoreBoard(){
                 <game-title variant="title">Score</game-title>
                 <div class="score">
                     <game-title variant="subtitle">Vos: ${playerScore}</game-title>
-                    <game-title variant="subtitle">Máquina: ${computerScore}</game-title>
+                    <game-title variant="subtitle">Oponente: ${computerScore}</game-title>
                 </div>
             </div>
             `;

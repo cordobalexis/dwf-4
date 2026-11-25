@@ -1,17 +1,20 @@
 {
-  "name": "repaso",
+  "name": "piedra-papel-tijera",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel src/index.html",
+    "dev": "vite src",
     "build": "parcel build src/index.html --public-url ./",
     "deploy": "gh-pages -d ./dist",
     "build-and-deploy": "yarn build && yarn deploy"
   },
   "dependencies": {
+    "firebase": "^13.2.0",
     "parcel": "^2.16.4"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "process": "^0.11.10",
+    "vite": "^8.3.8"
   }
 }
