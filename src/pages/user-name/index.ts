@@ -1,4 +1,5 @@
 import {state} from "../../state";
+import { API_BASE_URL } from "../../api";
 
 export function initUserNamePage(){
 class UserNamePage extends HTMLElement{
@@ -29,7 +30,7 @@ class UserNamePage extends HTMLElement{
             console.log("Código guardado para unirme:", roomCode);
 
             if(roomCode){
-                const response = await fetch(`http://localhost:3000/api/rooms/${roomCode}/players`, {
+                const response = await fetch(`${API_BASE_URL}/api/rooms/${roomCode}/players`, {
                     method: "POST",
                     headers: {"Content-Type": "application/json"},
                     body: JSON.stringify({name})
@@ -54,7 +55,7 @@ class UserNamePage extends HTMLElement{
                 return;
             }
 
-            const response = await fetch("http://localhost:3000/api/rooms", {
+            const response = await fetch(`${API_BASE_URL}/api/rooms`, {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({name})
